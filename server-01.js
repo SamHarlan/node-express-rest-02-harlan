@@ -12,7 +12,7 @@ var router     = express.Router();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-var port = 3000;        // set our port
+var port = 3010;        // set our port
 
 app.all('/', function HandleAll(request, response, next){
     console.log(request.connection.remoteAddress);
@@ -20,7 +20,7 @@ app.all('/', function HandleAll(request, response, next){
 });
 
 // test route to make sure everything is working 
-// (accessed at GET http://leia.cs.spu.edu:3000/api)
+// (accessed at GET http://leia.cs.spu.edu:3010/api)
 router.get('/', function HomeGetHandler(request, response) {
     response.json({ message: 'It Works' });
     db.connect(function ConnectionHandler(err){

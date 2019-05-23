@@ -24,7 +24,7 @@ app.all('/', function HandleAll(request, response, next){
 });
 
 // test route to make sure everything is working
-// (accessed at GET http://leia.cs.spu.edu:3000/api)
+// (accessed at GET http://leia.cs.spu.edu:3010/api)
 router.get('/', function HomeGetHandler(request, response) {
     response.json({ message: 'It Works' });
     db.connect(function ConnectionHandler(err){
