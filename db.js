@@ -7,7 +7,7 @@ exports.connect = function ConnectionHandler(done){
         host: "localhost",
         user: "dbuser",
         password: "csc3221!",
-        database: "friends"
+        database: "employees"
     });
     done();
 }
