@@ -15,7 +15,7 @@ exports.insert = function InsertHandler(birthDate, firstName, lastName, gender, 
 
 exports.getAll = function GetAllHandler(done){
     db.get().query(
-        'SELECT * FROM friends LIMIT 100', function SelectQueryHandler(err, result, fields){
+        'SELECT * FROM friends LIMIT 10', function SelectQueryHandler(err, result, fields){
             if (err)
                 return done(err);
             done(null, result, fields);
@@ -24,7 +24,7 @@ exports.getAll = function GetAllHandler(done){
 
 exports.findById = function FindByIdHandler(id, done){
     db.get().query(
-        'SELECT * FROM friends WHERE friend_id = ?', id, 
+        'SELECT * FROM friends WHERE friend_id = ?', id,
         function SelectQueryHandler(err, result, fields){
             if (err)
                 return done(err);
@@ -34,7 +34,7 @@ exports.findById = function FindByIdHandler(id, done){
 
 exports.findByName = function FindByNameHandler(name, done){
     db.get().query(
-        'SELECT * FROM friends WHERE first_name = ?', name, 
+        'SELECT * FROM friends WHERE first_name = ?', name,
         function SelectQueryHandler(err, result, fields){
             if (err)
                 return done(err);

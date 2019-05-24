@@ -1,4 +1,3 @@
-
 var mysql = require('mysql');
 
 var pool;
@@ -16,4 +15,3 @@ exports.connect = function ConnectionHandler(done){
 exports.get = function GetHandler(){
     return pool;
 }
-
